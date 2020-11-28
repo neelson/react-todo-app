@@ -1,0 +1,65 @@
+.item {
+    width: 540px;
+    border: solid 2px #8a7de3;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-content: center;
+}
+.completed {
+    text-decoration: line-through;
+}
+.controllButtons {
+    display: grid;
+    gap: 5px;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: center;
+}
+.controllButtons button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #4834d4;
+    cursor: pointer;
+}
+.controllButtons button svg {
+    width: 50%;
+    height: 50%;
+}
+.controllButtons button svg path{
+    fill: #eeecfb;
+}
+.controllButtons input[type='checkbox'] {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    background-color: #eeecfb;
+    appearance: none;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 4px 2px #aba2eb;
+    cursor: pointer;
+}
+.controllButtons input[type='checkbox']:checked {
+    background-color: #8a7de3;
+    box-shadow: inset 0px 0px 4px 2px #4834d4;
+}
+.controllButtons input[type='checkbox']::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    background-color: #4834d4;
+    box-shadow: inset 0px 0px 4px 2px #2e2287;
+    transform: scale(1.1);
+    transition: all 400ms;
+}
+.controllButtons input[type='checkbox']:checked::before {
+    left: 20px;
+}
